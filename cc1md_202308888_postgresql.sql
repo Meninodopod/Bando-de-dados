@@ -187,7 +187,7 @@ REFERENCES lojas.lojas (loja_id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
---cria a foreing da tabela pedidos 
+--cria a foreing key da tabela pedidos 
 ALTER TABLE lojas.pedidos ADD CONSTRAINT clientes_pedidos_fk
 FOREIGN KEY (cliente_id)
 REFERENCES lojas.clientes (cliente_id)
@@ -201,7 +201,7 @@ REFERENCES lojas.clientes (cliente_id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
-
+--cria a foreing key da tabela "pedidos_itens"
 ALTER TABLE lojas.pedidos_itens ADD CONSTRAINT envios_pedidos_itens_fk
 FOREIGN KEY (envios_id)
 REFERENCES lojas.envios (envios_id)
